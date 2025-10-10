@@ -1,125 +1,216 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A²B Reparações – Serviços 24h em Lisboa e Regiões Vizinhas</title>
-<meta name="description" content="Serviços 24h em Lisboa, Sintra, Cascais, Oeiras, Amadora, Loures, Almada, Odivelas, Seixal, Barreiro e Setúbal.">
-<link rel="icon" href="img/favicon.ico">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A2B Reparações — Grande Lisboa | Serviços 24h</title>
+  <meta name="description" content="A2B Reparações — serviços 24h em toda a Grande Lisboa e regiões vizinhas (eletricidade, canalizações, desentupimentos, estores, fechaduras, energia solar). Contacto rápido via WhatsApp." />
+  <meta name="author" content="A2B Reparações" />
+  <style>
+    :root{
+      --primary:#23292e;
+      --secondary:#c5a363;
+      --green:#25D366;
+      --bg-light:#f9f9f9;
+      --text-light:#222;
+      --bg-dark:#0f1112;
+      --text-dark:#e9ecef;
+      --muted:#6c757d;
+      --danger:#dc3545;
+      --container:1100px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:System-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      background:var(--bg-light);color:var(--text-light);-webkit-font-smoothing:antialiased;line-height:1.5;}
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px;}
+    header{background:var(--primary);color:white;padding:14px 0;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand svg{height:56px;width:auto;display:block}
+    nav ul{display:flex;gap:14px;list-style:none}
+    nav a{color:white;text-decoration:none;font-weight:600;opacity:.95}
+    nav a:hover{opacity:1;color:var(--secondary)}
+    .theme-toggle{background:transparent;border:1px solid rgba(255,255,255,.08);padding:8px 10px;border-radius:8px;color:white;cursor:pointer}
+    .hero{padding:64px 0;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.8),rgba(255,255,255,.8));}
+    .hero h1{font-size:2.0rem;margin-bottom:10px;color:var(--primary)}
+    .hero p{color:var(--muted);max-width:820px;margin:0 auto 18px}
+    .btn{display:inline-block;background:var(--secondary);color:#111;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700}
+    section{padding:56px 0}
+    .grid{display:grid;gap:18px}
+    .services-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .service-card{background:transparent;border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,.06);background:linear-gradient(180deg,#fff,#fafafa)}
+    .service-card h3{color:var(--primary);margin-bottom:8px;font-size:1.05rem}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:12px;border:1px solid #e6e6e6;border-radius:8px;margin-bottom:12px}
+    .contact-form textarea{min-height:140px;resize:vertical}
+    footer{background:var(--primary);color:white;padding:32px 0}
+    .footer-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+    .contact-line{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+    .whatsapp-float{position:fixed;right:18px;bottom:18px;background:var(--green);color:white;padding:14px;border-radius:50%;box-shadow:0 6px 18px rgba(0,0,0,.22);display:flex;align-items:center;justify-content:center;text-decoration:none}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    body.dark{background:var(--bg-dark);color:var(--text-dark)}
+    body.dark .hero{background:linear-gradient(180deg,rgba(0,0,0,.4),rgba(0,0,0,.4))}
+    body.dark .service-card{background:linear-gradient(180deg,#141516,#151517);box-shadow:0 6px 18px rgba(0,0,0,.6)}
+    body.dark .btn{background:var(--secondary);color:#111}
+    body.dark header{background:#0d1112}
+    @media (max-width:900px){.contact-grid{grid-template-columns:1fr}nav ul{display:none}header .header-inner{flex-direction:row;justify-content:space-between}}
+  </style>
 </head>
 <body>
-<header>
-  <div class="container header-content">
-    <div class="logo"><img src="img/a2b_logo_final.png" alt="A²B Reparações logo"></div>
-    <nav>
-      <ul>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="container header-inner" role="banner">
+      <div class="brand" aria-label="A2B Reparações">
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#c5a363"/>
+              <stop offset="1" stop-color="#d9b971"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="70" height="70" rx="10" ry="10" fill="#23292e" />
+          <path d="M12 56 L30 38 L40 48 L46 42 L36 32 L54 14 L60 20 L50 30 L56 36 L72 20" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(2,2) scale(0.9)"/>
+          <polygon points="36,10 24,36 40,36 28,62 52,28 36,28" fill="url(#g)" transform="translate(4,4) scale(0.7)"/>
+          <text x="86" y="34" font-family="Segoe UI, Roboto, Arial" font-weight="700" font-size="30" fill="url(#g)">A<tspan dy="-6" font-size="14">2</tspan>B</text>
+          <text x="86" y="58" font-family="Segoe UI, Roboto, Arial" font-size="12" fill="#9aa3a6">REPARAÇÕES</text>
+        </svg>
+      </div>
 
-<section class="hero" id="home" style="background-image:url('img/hero-bg.svg')">
-  <div class="container">
-    <div class="hero-logo" aria-hidden="true">A²B</div>
-    <h1>Serviços Profissionais de Reparações 24h</h1>
-    <p>Atendimento em toda a Grande Lisboa, Sintra, Cascais, Oeiras, Amadora, Loures, Almada, Odivelas, Seixal, Barreiro, Setúbal e arredores.</p>
-    <a class="btn" href="#contact">Pedir Orçamento</a>
-  </div>
-</section>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
 
-<section id="services" class="services">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:18px">
-      <h2>Os nossos serviços</h2>
-      <p style="color:var(--muted)">Electricidade, canalizações, desentupimentos, estores, fechaduras, energia solar e mais.</p>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button id="themeToggle" class="theme-toggle" aria-pressed="false" title="Alternar tema">🌙 / ☀️</button>
+      </div>
     </div>
-    <div class="services-grid">
-      <div class="service-card"><h3>Fechaduras e abertura de portas</h3><p>Substituição, instalação e abertura em situações de emergência.</p></div>
-      <div class="service-card"><h3>Canalizações</h3><p>Reparações, trocas e instalações.</p></div>
-      <div class="service-card"><h3>Desentupimentos</h3><p>Rápido e eficaz em lavatórios, ralos e esgotos.</p></div>
-      <div class="service-card"><h3>Estores</h3><p>Reparação, manutenção e instalação.</p></div>
-      <div class="service-card"><h3>Máquinas</h3><p>Instalação e manutenção de máquinas de lavar e loiça.</p></div>
-      <div class="service-card"><h3>Carregadores eléctricos</h3><p>Instalação certificada para veículos eléctricos.</p></div>
-    </div>
-  </div>
-</section>
+  </header>
 
-<section id="about" class="about">
-  <div class="container">
-    <h2>Porquê escolher a A²B Reparações?</h2>
-    <p style="color:var(--muted);max-width:800px">Técnicos credenciados, atendimento rápido e garantia. Trabalhamos 24 horas para lhe dar segurança e tranquilidade.</p>
-  </div>
-</section>
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Soluções Profissionais em Reparações — Grande Lisboa</h1>
+        <p>Atendimento 24 horas em eletricidade, canalizações, desentupimentos, estores, fechaduras, energia solar e mais. Cobrimos toda a Grande Lisboa e regiões vizinhas. Contacte já pelo WhatsApp ou envie-nos uma mensagem.</p>
+        <a class="btn" href="#contact">Pedir Orçamento</a>
+      </div>
+    </section>
 
-<section id="contact" class="contact">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:18px">
+    <section id="services" class="container">
+      <div class="section-title" style="text-align:center;margin-bottom:18px">
+        <h2>Os nossos serviços</h2>
+        <p style="color:var(--muted)">Eletricidade, canalizações, desentupimentos, estores, fechaduras, manutenção e emergência 24h na Grande Lisboa e arredores.</p>
+      </div>
+
+      <div class="services-grid grid" style="margin-top:20px">
+        <div class="service-card"><h3>Fechaduras e abertura de portas</h3><p>Substituição e abertura em situações de emergência.</p></div>
+        <div class="service-card"><h3>Canalizações</h3><p>Reparações, trocas e instalações para habitações e empresas.</p></div>
+        <div class="service-card"><h3>Desentupimentos</h3><p>Rápido e eficaz em lavatórios, canos, ralos e esgotos.</p></div>
+        <div class="service-card"><h3>Carregadores eléctricos</h3><p>Instalação certificada para habitação e condomínios.</p></div>
+        <div class="service-card"><h3>Esquentadores e caldeiras</h3><p>Instalação e manutenção por técnicos credenciados.</p></div>
+        <div class="service-card"><h3>Energia Solar</h3><p>Projectos e instalação de sistemas fotovoltaicos.</p></div>
+      </div>
+    </section>
+
+    <section id="about" class="container" aria-labelledby="about-title" style="margin-top:36px">
+      <h2 id="about-title">Porquê escolher a A2B Reparações?</h2>
+      <p style="color:var(--muted);max-width:900px">Técnicos credenciados, atendimento rápido e garantia nos serviços. Trabalhamos 24 horas em toda a Grande Lisboa e arredores para lhe dar segurança e tranquilidade.</p>
+    </section>
+
+    <section id="contact" class="container" style="margin-top:36px">
       <h2>Contacte-nos</h2>
       <p style="color:var(--muted)">Peça orçamento rápido, tire dúvidas ou fale connosco 24h via WhatsApp.</p>
-    </div>
-    <div class="contact-grid">
+
+      <div class="contact-grid" style="margin-top:18px">
+        <div>
+          <h3>Dados de contacto</h3>
+          <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4v16h16V4z" fill="#25D366"/></svg><span><strong>WhatsApp:</strong> <a href="https://wa.me/351964562617" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none">+351 964 562 617</a> (24h)</span></div>
+          <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.79a10 10 0 0 0 6.61 6.61l1.83-1.83a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02L6.6 10.79z" fill="#c5a363"/></svg><span><strong>Telefone principal:</strong> +351 931 603 505</span></div>
+          <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.79a10 10 0 0 0 6.61 6.61l1.83-1.83a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02L6.6 10.79z" fill="#c5a363"/></svg><span><strong>Telefone apoio:</strong> +351 936 747 368</span></div>
+          <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#c5a363"/></svg><span><strong>Área de atendimento:</strong> Grande Lisboa, Sintra, Cascais, Oeiras, Amadora, Loures, Almada, Odivelas, Seixal, Barreiro, Setúbal e arredores.</span></div>
+          <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4v16h16V4z" fill="#c5a363"/></svg><span><strong>Email:</strong> a2b-reparacoes@hotmail.com</span></div>
+        </div>
+
+        <div class="contact-form" aria-labelledby="form-title">
+          <h3 id="form-title">Envie-nos uma mensagem</h3>
+          <form action="https://formsubmit.co/a2b-reparacoes@hotmail.com" method="POST" onsubmit="onFormSubmit(event)">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Recebemos a sua mensagem">
+            <input type="hidden" name="_autoresponse" value="Olá, obrigado por contactar a A²B Reparações. Recebemos o seu pedido e entraremos em contacto o mais breve possível. Atendimento 24h — Grande Lisboa e regiões vizinhas. Cumprimentos, Equipa A²B Reparações">
+            <input type="text" name="nome" placeholder="O seu nome" required aria-label="Nome">
+            <input type="email" name="email" placeholder="O seu e-mail" required aria-label="Email">
+            <input type="tel" name="telefone" placeholder="O seu telefone" aria-label="Telefone">
+            <select name="servico" required aria-label="Serviço">
+              <option value="" disabled selected>Selecione o serviço</option>
+              <option value="fechaduras">Fechaduras e abertura de portas</option>
+              <option value="canalizacao">Canalizações</option>
+              <option value="desentupimentos">Desentupimentos</option>
+              <option value="estores">Estores</option>
+              <option value="maquinas">Máquinas de lavar roupa/loiça</option>
+              <option value="carregador">Carregador carro eléctrico</option>
+              <option value="esquentador">Esquentadores e caldeiras</option>
+              <option value="termoacumulador">Termoacumuladores</option>
+              <option value="residencial">Instalações eléctricas residenciais</option>
+              <option value="comercial">Instalações eléctricas comerciais</option>
+              <option value="manutencao">Manutenção preventiva</option>
+              <option value="emergencia">Emergência 24h</option>
+              <option value="solar">Energia solar</option>
+              <option value="outro">Outro</option>
+            </select>
+            <textarea name="mensagem" placeholder="Descreva a sua necessidade" required aria-label="Mensagem"></textarea>
+            <button type="submit" class="btn">Enviar mensagem</button>
+            <div id="localSuccess" style="display:none;margin-top:12px;padding:10px;background:#e6ffed;border:1px solid #c6f3d2;border-radius:8px;color:#0a6f33">Obrigado — a sua mensagem está a ser enviada. Verifique a sua caixa de e-mail para confirmar (FormSubmit) se for a primeira submissão.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container footer-columns">
       <div>
-        <h3>Dados de contacto</h3>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/351964562617" target="_blank">+351 964 562 617</a> (24h)</p>
-        <p><strong>Telefone:</strong> +351 931 603 505</p>
-        <p><strong>Email:</strong> <a href="mailto:a2b-reparacoes@hotmail.com">a2b-reparacoes@hotmail.com</a></p>
-        <p><strong>Atendimento:</strong> Grande Lisboa, Sintra, Cascais, Oeiras, Amadora, Loures, Almada, Odivelas, Seixal, Barreiro, Setúbal e arredores.</p>
+        <h3 style="color:var(--secondary)">A2B Reparações</h3>
+        <p style="color:inherit">Serviços de electricidade, canalizações e multi-serviços na Grande Lisboa e regiões vizinhas com atendimento 24h e garantia.</p>
       </div>
-      <div class="contact-form">
-        <form action="https://formsubmit.co/a2b-reparacoes@hotmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="obrigado.html">
-          <input type="hidden" name="_autoresponse" value="Olá, obrigado por contactar a A²B Reparações. Recebemos o seu pedido e entraremos em contacto o mais breve possível. Atendimento 24h — Grande Lisboa e regiões vizinhas. Cumprimentos, Equipa A²B Reparações.">
-          <input type="text" name="nome" placeholder="O seu nome" required>
-          <input type="email" name="email" placeholder="O seu e-mail" required>
-          <input type="tel" name="telefone" placeholder="O seu telefone">
-          <select name="servico" required>
-            <option value="" disabled selected>Selecione o serviço</option>
-            <option value="fechaduras">Fechaduras e abertura de portas</option>
-            <option value="canalizacao">Canalizações</option>
-            <option value="desentupimentos">Desentupimentos</option>
-            <option value="estores">Estores</option>
-            <option value="maquinas">Máquinas</option>
-            <option value="carregador">Carregador carro eléctrico</option>
-            <option value="esquentador">Esquentadores e caldeiras</option>
-            <option value="termoacumulador">Termoacumuladores</option>
-            <option value="residencial">Instalações eléctricas residenciais</option>
-            <option value="comercial">Instalações eléctricas comerciais</option>
-            <option value="manutencao">Manutenção preventiva</option>
-            <option value="emergencia">Emergência 24h</option>
-            <option value="solar">Energia solar</option>
-            <option value="outro">Outro</option>
-          </select>
-          <textarea name="mensagem" placeholder="Descreva a sua necessidade" required></textarea>
-          <button type="submit" class="btn">Enviar mensagem</button>
-        </form>
+      <div>
+        <h4>Contacto</h4>
+        <p style="color:inherit"><strong>WhatsApp:</strong> <a href="https://wa.me/351964562617" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none">+351 964 562 617</a> (24h)</p>
+        <p style="color:inherit"><strong>Telefone principal:</strong> +351 931 603 505</p>
+        <p style="color:inherit"><strong>Telefone apoio:</strong> +351 936 747 368</p>
+        <p style="color:inherit"><strong>Email:</strong> a2b-reparacoes@hotmail.com</p>
       </div>
     </div>
-  </div>
-</section>
+    <div class="container footer-bottom" style="margin-top:18px;color:rgba(255,255,255,0.85)">&copy; 2025 A2B Reparações. Todos os direitos reservados.</div>
+  </footer>
 
-<footer>
-  <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px">
-    <div style="max-width:520px">
-      <h3>A²B Reparações</h3>
-      <p>Serviços de electricidade, canalizações e multi-serviços em Lisboa e regiões vizinhas com atendimento 24h e garantia.</p>
-    </div>
-    <div>
-      <h3>Contacto</h3>
-      <p><strong>WhatsApp:</strong> +351 964 562 617 (24h)</p>
-      <p><strong>Telefone:</strong> +351 931 603 505</p>
-      <p><strong>Email:</strong> a2b-reparacoes@hotmail.com</p>
-    </div>
-  </div>
-  <div style="text-align:center;padding-top:12px;color:rgba(255,255,255,0.85)">&copy; 2025 A²B Reparações. Todos os direitos reservados.</div>
-</footer>
+  <a class="whatsapp-float" href="https://wa.me/351964562617" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 24h">
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M17.6 6.4C16.4 5.2 14.8 4.5 13 4.5c-3.9 0-7 3.1-7 7 0 1.1.3 2.1.9 3L5 19l4.6-1.2c.9.5 1.9.8 3 .8 3.9 0 7-3.1 7-7 0-1.8-.7-3.4-1.9-4.6zM13 16c-1 0-1.9-.3-2.7-.8l-.2-.1-2.6.7.7-2.6-.1-.2C7.3 11.9 7 11 7 10c0-3 2.5-5.5 5.5-5.5S18 7 18 10.5 16 16 13 16z"/></svg>
+  </a>
 
-<a class="whatsapp-float" href="https://wa.me/351964562617" target="_blank" title="WhatsApp 24h">💬</a>
-<script src="js/main.js"></script>
+  <script>
+    (function(){
+      const btn = document.getElementById('themeToggle');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const saved = localStorage.getItem('a2b_theme');
+      if(saved === 'dark' || (!saved && prefersDark)) document.body.classList.add('dark');
+      btn.addEventListener('click', ()=>{
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        localStorage.setItem('a2b_theme', isDark ? 'dark' : 'light');
+        btn.setAttribute('aria-pressed', isDark);
+      });
+    })();
+
+    function onFormSubmit(e){
+      const note = document.getElementById('localSuccess');
+      note.style.display = 'block';
+      // Allow form to submit to FormSubmit (no preventDefault) so FormSubmit will handle delivery & verification
+    }
+  </script>
 </body>
 </html>
